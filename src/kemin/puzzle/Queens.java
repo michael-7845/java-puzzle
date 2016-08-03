@@ -16,7 +16,7 @@ public class Queens {
         this.sum = 0 ;  //初始化方案数为1，当回溯到最佳方案的时候，就自增1  
         this.n = 5 ;    //求n皇后问题，由自己定义  
         this.x = new int[n+1];  //x[i]表示皇后i放在棋盘的第i行的第x[i]列  
-        h = 1 ; //这个是我额外定义的变量，用于遍历方案的个数，请看backTrace()中h变量的作用，这里将它定义为static静态变量  
+        h = 1 ; //遍历方案的个数，为static静态变量  
     }  
     
     public boolean place(int c) {

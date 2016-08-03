@@ -15,6 +15,8 @@ import static kemin.puzzle.CrossRiverThing.*;
  * 如果他不在场，狼会吃羊，羊会吃卷心菜
  * 此人如何才能把这三个乘客送至对岸。
  */
+
+// XXXX 未完成!!!!!!!!!!!!!!!!!!!!!!
 public class CrossRiver {
 //public enum CrossRiverThing {
 //	p, w, s, c; // person, wolf, sheep, cabbage
