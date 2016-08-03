@@ -23,7 +23,7 @@ public class A {
 	 * @return
 	 *******************************************/
 	public static int[] gen(int size) {
-		Random r = new Random(103L);
+		Random r = new Random(113L);
 		Set<Integer> s = new HashSet<Integer>();
 		while(s.size()<size) {
 			s.add(r.nextInt(size*2));
@@ -36,8 +36,20 @@ public class A {
 		return res;
 	}
 	
+	public static int[] genSorted(int size) {
+		int[] _res = gen(size);
+		Arrays.sort(_res);
+		return _res;
+	}
+	
 	private static void demo() {
 		int[] a = gen(20);
+		for(int x: a) {
+			d(x + ", ");
+		}
+		p("");
+		
+		a = genSorted(6);
 		for(int x: a) {
 			d(x + ", ");
 		}
@@ -85,7 +97,7 @@ public class A {
 
 	
 	/**
-	 * 
+	 * print 2d array
 	 * @param args
 	 */
 	public static <T> void print2dArray(T[][] a) {
@@ -104,8 +116,41 @@ public class A {
 		print2dArray(a);
 	}
 	
+	/**
+	 * merge 2 arrays
+	 * @param args
+	 */
+	public static <T> T[] merge(T[] a, T[] b) {
+		T[] c = (T[]) new Object[a.length+b.length];
+		System.arraycopy(a, 0, c, 0, a.length);
+		System.arraycopy(b, 0, c, a.length, b.length);
+		return c;
+	}
+	
+	public static int[] merge(int[] a, int[] b) {
+		int[] c = new int[a.length+b.length];
+		System.arraycopy(a, 0, c, 0, a.length);
+		System.arraycopy(b, 0, c, a.length, b.length);
+		return c;
+	}
+	
+	public static void demo4() {
+//		Integer[] a = {1, 2, 3};
+//		Integer[] b = {4, 5, 6};
+//		Integer[] c = (Integer[]) merge(a, b);
+//		for(Integer i: c) {
+//			p(i);
+//		}
+		int[] a = {1, 2, 3};
+		int[] b = {4, 5, 6};
+		int[] c = merge(a, b);
+		for(int i: c) {
+			p(i);
+		}
+	}
+	
 	public static void main(String[] args) {
-		demo3();
+		demo();
 	}
 
 }
