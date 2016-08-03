@@ -19,7 +19,7 @@ public class MergeInterval {
 	
 	public static Interval[] merge(Interval[] intervals) {
 		if(intervals==null || intervals.length==0)
-			return null;
+			return intervals;
 		
 		Arrays.sort(intervals, new Comparator<Interval>(){
 			public int compare(Interval i1, Interval i2) {
