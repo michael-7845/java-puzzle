@@ -94,7 +94,6 @@ public class A {
 			p(i.toString());
 		}
 	}
-
 	
 	/**
 	 * print 2d array
@@ -117,6 +116,22 @@ public class A {
 	}
 	
 	/**
+	 * print array
+	 * @param args
+	 */
+	public static <T> void printArray(T[] a) {
+		for(T item: a) {
+			d(String.format("%5s | ", item));
+		}
+		p("");
+	}
+	
+	private static void demo4() {
+		Integer[] a = {1, 2, 3, 4, 15, 6, 7, 228, 9};
+		printArray(a);
+	}
+	
+	/**
 	 * merge 2 arrays
 	 * @param args
 	 */
@@ -134,7 +149,7 @@ public class A {
 		return c;
 	}
 	
-	public static void demo4() {
+	public static void demo5() {
 //		Integer[] a = {1, 2, 3};
 //		Integer[] b = {4, 5, 6};
 //		Integer[] c = (Integer[]) merge(a, b);
@@ -150,7 +165,7 @@ public class A {
 	}
 	
 	public static void main(String[] args) {
-		demo();
+		demo4();
 	}
 
 }
