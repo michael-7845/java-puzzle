@@ -103,7 +103,15 @@ public class Queue<T> {
 		return sb.toString();
 	}
 	
-	public static void demo() {
+	public void show() {
+		Node<T> cur = this.first;
+		while(cur!=null) {
+			p(cur);
+			cur = cur.next;
+		}
+	}
+	
+	private static void demo() {
 		Queue<Integer> q = new Queue<Integer>(1, 2, 3);
 		p(q);
 		q.reverse();

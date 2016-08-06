@@ -44,7 +44,7 @@ public class CopyListWithRandomPointer {
 	}
 	
 	public static void demo() {
-		RandomList rl = new RandomList(1,2,3,4,5,6);
+		RandomList rl = new RandomList(1,2,3,4,5,6,7,8,9);
 		RandomList rlCopy = copy1(rl);
 		p("rl");
 		rl.show();
@@ -74,7 +74,7 @@ public class CopyListWithRandomPointer {
 	}
 	
 	public static void demo2() {
-		RandomList rl = new RandomList(1,2,3,4,5,6);
+		RandomList rl = new RandomList(1,2,3,4,5,6,7,8,9,10);
 		RandomList rlCopy = copy2(rl);
 		p("rl");
 		rl.show();
@@ -83,7 +83,7 @@ public class CopyListWithRandomPointer {
 	}
 
 	public static void main(String[] args) {
-		demo2();
+		demo();
 	}
 }
 
@@ -105,7 +105,7 @@ class RandomListNode {
 //			random = this.random.hashCode();
 			random = this.random.value;
 		
-		return String.format("value: %d, hash: %10d, next: %10d, random: %10d", this.value, me, next, random);
+		return String.format("value: %2d, hash: %10d, next: %10d, random: %10d", this.value, me, next, random);
 	}
 }
 
