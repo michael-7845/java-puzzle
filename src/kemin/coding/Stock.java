@@ -53,7 +53,7 @@ public class Stock {
 				totalProfit += profit;
 			}
 		}
-//		p(totalProfit);
+		p(totalProfit);
 		return totalProfit;
 	}
 	
@@ -136,10 +136,10 @@ public class Stock {
 	}
 
 	public static void main(String[] args) {
-		demo1(array);
-		demo2(array);
+//		demo1(array);
+//		demo2(array);
 		demo2b(array);
-		demo3(array);
+//		demo3(array);
 	}
 
 }

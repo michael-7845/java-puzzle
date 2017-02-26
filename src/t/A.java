@@ -100,8 +100,9 @@ public class A {
 	 * @param args
 	 */
 	public static <T> void print2dArray(T[][] a) {
-//		int row = a.length;
-//		int col = a[0].length;
+		int rowNumber = a.length;
+		int colNumber = a[0].length;
+		p("row: " + rowNumber + ", col: " + colNumber);
 		for(T[] row: a) {
 			for(T item: row) {
 				d(String.format("| %5s ", item));
